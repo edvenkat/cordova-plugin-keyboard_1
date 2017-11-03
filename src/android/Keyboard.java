@@ -24,6 +24,7 @@ import android.os.Build;
 public class Keyboard extends CordovaPlugin {
     private OnGlobalLayoutListener list;
     private View rootView;
+    public CallbackContext callbackContext;
 	
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
@@ -31,6 +32,7 @@ public class Keyboard extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+	    	callbackContext = callbackContext;
 		Activity activity = this.cordova.getActivity();
 		InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
 
