@@ -10,12 +10,13 @@
 	<engine name="cordova" version=">=3.2.0" />
     </engines>
 
-    <js-module src="www/keyboard.js" name="keyboard">
-    	<clobbers target="window.Keyboard" />
-    </js-module>
+  
 
     <!-- ios -->
     <platform name="ios">
+	  <js-module src="www/ios/keyboard.js" name="keyboard">
+		<clobbers target="window.Keyboard" />
+	   </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="Keyboard">
                 <param name="ios-package" value="CDVKeyboard" onload="true" />
@@ -28,6 +29,9 @@
 
     <!-- android -->
     <platform name="android">
+	   <js-module src="www/android/keyboard.js" name="keyboard">
+		<clobbers target="window.Keyboard" />
+	    </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="Keyboard">
                 <param name="android-package" value="org.apache.cordova.labs.keyboard.Keyboard" onload="true" />
