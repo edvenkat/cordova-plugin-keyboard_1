@@ -99,13 +99,13 @@ public class Keyboard extends CordovaPlugin {
 								String msg = "S" + Integer.toString(pixelHeightDiff);
 								result = new PluginResult(PluginResult.Status.OK, msg);
 								result.setKeepCallback(true);
-								callbackContext.sendPluginResult(result);
+								//callbackContext.sendPluginResult(result);
 							}
 							else if ( pixelHeightDiff != previousHeightDiff && ( previousHeightDiff - pixelHeightDiff ) > 100 ){
 								String msg = "H";
 								result = new PluginResult(PluginResult.Status.OK, msg);
 								result.setKeepCallback(true);
-								callbackContext.sendPluginResult(result);
+								//callbackContext.sendPluginResult(result);
 							}
 							previousHeightDiff = pixelHeightDiff;
 						 }
@@ -116,7 +116,7 @@ public class Keyboard extends CordovaPlugin {
 
 					PluginResult dataResult = new PluginResult(PluginResult.Status.OK);
 					dataResult.setKeepCallback(true);
-					callbackContext.sendPluginResult(dataResult);
+					//callbackContext.sendPluginResult(dataResult);
 				}
 			});
 			return true;
